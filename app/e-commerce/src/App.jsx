@@ -1,17 +1,20 @@
-import './App.css'
-import Header from './components/Header'
+import "./App.css";
+import Header from "./components/Header";
+import { Routes, Route } from "react-router-dom";
+import Login from "./pages/Login";
+
 
 function App() {
-  
-
   return (
     <>
-      <div>
-        <Header/>
-      </div>
-      
+      <Header />
+      <main>
+        <Routes>
+          <Route path="/login" element={<Login />} />
+        </Routes>
+      </main>
     </>
-  )
+  );
 }
 
-export default App
+export default App;

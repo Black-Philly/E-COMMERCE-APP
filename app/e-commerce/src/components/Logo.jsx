@@ -1,8 +1,12 @@
 import React from 'react'
+import logo from '../assets/WE_logo.jpeg'
 
 function Logo() {
   return (
-    <div>Logo</div>
+    <div>
+        <img src={logo} alt='logo' w-20 h-20/>
+    </div>
+    
   )
 }
 
