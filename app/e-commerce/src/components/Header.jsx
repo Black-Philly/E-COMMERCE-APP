@@ -19,21 +19,21 @@ function Header() {
             placeholder="Search for products ..."
             className="outline-none w-full"
           />
-          <span className="text-lg bg-amber-400 h-8 min-w-[50px] flex items-center justify-center rounded-r-full">
+          <span className="cursor-pointer text-lg bg-amber-400 h-8 min-w-[50px] flex items-center justify-center rounded-r-full">
             <FiSearch />
           </span>
         </div>
 
         <div className="flex gap-5">
           <div className="text-3xl">
-                <div>
+                <div className="cursor-pointer">
                      <CgProfile />
                 </div>
           </div>
 
           <div className="text-3xl relative">
                 <div >
-                    <span className="text-3xl"> <BsCart4 /> </span>
+                    <span className="text-3xl cursor-pointer"> <BsCart4 /> </span>
                     <div className="flex justify-center w-5 rounded-full bg-red-500 absolute -top-2 -right-1">
                         <p className="text-sm text-white ">0</p>
                     </div>
