@@ -2,12 +2,19 @@ import userModel from "../models/userModel.js";
 import bcrypt from 'bcryptjs'
 
 
-export const userSignupController = async() => {
+export const userSignupController = async(req, res) => {
 
     try{
 
         const {email, password, name} = req.body;
 
+
+        const user = await userModel.findOne ({email})
+
+        if (user){
+            throw new Error('User already exist')
+        }
+        
     if (!email || !password || !name){
         throw new Error('Please provide email, password and name');
     };

@@ -6,7 +6,9 @@ import { IoEyeOffOutline } from "react-icons/io5";
 
 function Login() {
 
-const [showPassword, setShowPassword] = useState(false)
+
+const [showPassword, setShowPassword] = useState(true)
+
 
   return (
     <section id="login">
@@ -22,7 +24,8 @@ const [showPassword, setShowPassword] = useState(false)
             </div>
 
             
-                <form>
+                <form className="w-full p-2 max-w-md mx-auto py-5" >
+
                     <div className="container block justify-center">
                         <div className="justify-start gap-2">
                             <label>Email:</label>
@@ -40,19 +43,23 @@ const [showPassword, setShowPassword] = useState(false)
                             <label>Password:</label>
                             <div className="flex bg-slate-100 p-1">
                                 <input
-                                    type={showPassword ? 'text' : 'password'}
+                                    // value={password}
+                                    // onChange={(e) => setPassword(e.target.value)}
+                                    type={showPassword ? 'password' : 'text'}
                                     placeholder="Enter your Password"
                                     className="w-full h-full outline-none"
                                 />
-                                    <div className="text-xl cursor-pointer" onClick={()=> setShowPassword((prev) => !prev)}>
+                                    <div className="text-xl cursor-pointer" 
+                                     onClick={()=> setShowPassword
+                                        ((prev) => (!prev))}
+                                    >
                                         <span>
-                                            {showPassword ? (
-                                                <IoEyeOutline/>
-                                            )
-                                            :
-                                            (
+                                            {
+                                                showPassword ? 
+                                                <IoEyeOutline/> 
+                                                : 
                                                 <IoEyeOffOutline/>
-                                            )}
+                                            }
                                         </span>
                                     </div>
                             </div>
@@ -72,7 +79,9 @@ const [showPassword, setShowPassword] = useState(false)
                 
                 
             
-            <div className="font-serif text-x">New Member? <Link to={'/signup'} className="cursor-pointer text-amber-700 ">Signup </Link>here</div>
+            <div className="font-serif text-x">New Member? <Link to={'/signup'} 
+            className="cursor-pointer text-amber-700 hover:underline">Signup </Link>here
+            </div>
       </div>
     </section>
   );
