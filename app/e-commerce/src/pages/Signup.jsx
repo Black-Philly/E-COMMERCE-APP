@@ -4,6 +4,7 @@ import { FaRegEye } from "react-icons/fa";
 import { FaRegEyeSlash } from "react-icons/fa";
 import imageToBase64 from "../helper/imageToBase64";
 import loginPic from "../assets/profileImage.png";
+import Login from "./Login";
 
 function Signup() {
   const [showPassword, setShowPassword] = useState(false);
@@ -72,7 +73,7 @@ function Signup() {
               <div className="bg-slate-100 p-1">
                 <input
                   type="email"
-                  placeholder="enter your email"
+                  placeholder="Enter your email"
                   className="w-full h-full outline-none"
                 />
               </div>
@@ -84,7 +85,7 @@ function Signup() {
               <div className="flex bg-slate-100 p-1">
                 <input
                   type={showPassword ? "text" : "password"}
-                  placeholder="enter your password"
+                  placeholder="Enter your password"
                   className="w-full h-full outline-none"
                 />
                 <div
@@ -102,7 +103,7 @@ function Signup() {
               <div className="flex bg-slate-100 p-1">
                 <input
                   type={showConfirmPassword ? "text" : "password"}
-                  placeholder="enter your password"
+                  placeholder="Enter your password"
                   className="w-full h-full outline-none"
                 />
 
@@ -133,7 +134,7 @@ function Signup() {
 
           <p className="my-5">
             Already have an account?{" "}
-            <Link className="text-amber-700 hover:underline">Login</Link>
+            <Link to={"/login"} className="text-amber-700 hover:underline">Login</Link>
           </p>
 
         </div>
