@@ -12,20 +12,23 @@ import Profile from "./pages/Profile";
 function App() {
   return (
     <>
-      <Header />
+      <div className="fixed-div">
+        <Header />
+      </div>
+
       <main>
         <Routes>
-
-          <Route path="/home" element={<Home />}/> 
+          <Route path="/home" element={<Home />} />
           <Route path="/login" element={<Login />} />
           <Route path="/forget-password" element={<ForgetPassword />} />
           <Route path="/signup" element={<Signup />} />
           <Route path="/shopping-cart" element={<Cart />} />
-          <Route path="/profile" element={ <Profile/>} />
-          
+          <Route path="/profile" element={<Profile />} />
         </Routes>
       </main>
+
       <Footer />
+      
     </>
   );
 }

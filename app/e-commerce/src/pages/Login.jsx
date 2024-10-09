@@ -81,7 +81,7 @@ function Login() {
               New Member?{" "}
               <Link
                 to={"/signup"}
-                className="cursor-pointer text-amber-400 hover:underline"
+                className="cursor-pointer text-amber-300 hover:underline"
               >
                 Signup{" "}
               </Link>

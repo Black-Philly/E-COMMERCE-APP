@@ -4,7 +4,7 @@ import { FaRegEye } from "react-icons/fa";
 import { FaRegEyeSlash } from "react-icons/fa";
 import imageToBase64 from "../helper/imageToBase64";
 import loginPic from "../assets/profileImage.png";
-import Login from "./Login";
+
 
 function Signup() {
   const [showPassword, setShowPassword] = useState(false);
@@ -127,8 +127,10 @@ function Signup() {
               transition-all cursor-pointer 
               block mx-auto mt-4 font-bold"
             >
+              <Link to={'/login'}>
               Sign Up
-            </button>
+              </Link>
+              </button>
           </form>
 
 

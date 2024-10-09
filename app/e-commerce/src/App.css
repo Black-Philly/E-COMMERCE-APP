@@ -7,3 +7,18 @@
 }
 
 
+.no-bullet {
+  list-style: none;
+  text-align: left;
+  margin-top: 4px;
+}
+
+
+.fixed-div {
+position: fixed;
+top: 0;
+left: 0;
+right: 0;
+z-index: 999;
+padding: 1rem;
+}
